@@ -1,0 +1,37 @@
+<div class="signup-wrap">
+    <div class="signup-card col-md-10">
+        <div class="signup-card-image"></div>
+        <form [formGroup]="signUpForm" class="signin-form">
+            <h1>Create an account on MFE Demo</h1>
+            <mat-form-field class="signin-form-full-width" appearance="fill" *ngIf="!isConfirm">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                <mat-error
+                    *ngIf="signUpForm.get('email')?.hasError('email') && !signUpForm.get('email')?.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="signUpForm.get('email')?.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="signin-form-full-width" appearance="fill" *ngIf="!isConfirm">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+                <mat-error *ngIf="signUpForm.get('password')?.hasError('required')">
+                    Password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="signin-form-full-width" appearance="fill" *ngIf="isConfirm">
+                <mat-label>Authorization code</mat-label>
+                <input type="text" matInput formControlName="code">
+                <mat-error *ngIf="signUpForm.get('code')?.hasError('required')">
+                    Code is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="signUp()" *ngIf="!isConfirm" [disabled]="loading">Sign
+                Up</button>
+            <button mat-raised-button color="primary" (click)="confirmSignUp()" *ngIf="isConfirm"
+                [disabled]="loading">Confirm</button>
+        </form>
+    </div>
+</div>

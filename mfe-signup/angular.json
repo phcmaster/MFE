@@ -1,0 +1,123 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "513a8c60-dd6f-4c5d-ad90-9b2eeba12edb"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "signup": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/signup",
+      "sourceRoot": "projects/signup/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/signup",
+            "index": "projects/signup/src/index.html",
+            "main": "projects/signup/src/main.ts",
+            "polyfills": "projects/signup/src/polyfills.ts",
+            "tsConfig": "projects/signup/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/signup/src/favicon.ico",
+              "projects/signup/src/assets"
+            ],
+            "styles": [
+              "projects/signup/src/styles.scss"
+            ],
+            "scripts": [],
+            "extraWebpackConfig": "projects/signup/webpack.config.js",
+            "commonChunk": false
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/signup/src/environments/environment.ts",
+                  "with": "projects/signup/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "extraWebpackConfig": "projects/signup/webpack.prod.config.js"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "signup:build:production",
+              "extraWebpackConfig": "projects/signup/webpack.prod.config.js"
+            },
+            "development": {
+              "browserTarget": "signup:build:development"
+            }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 3200,
+            "publicHost": "http://localhost:3200",
+            "extraWebpackConfig": "projects/signup/webpack.config.js"
+          }
+        },
+        "extract-i18n": {
+          "builder": "ngx-build-plus:extract-i18n",
+          "options": {
+            "browserTarget": "signup:build",
+            "extraWebpackConfig": "projects/signup/webpack.config.js"
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "projects/signup/src/test.ts",
+            "polyfills": "projects/signup/src/polyfills.ts",
+            "tsConfig": "projects/signup/tsconfig.spec.json",
+            "karmaConfig": "projects/signup/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/signup/src/favicon.ico",
+              "projects/signup/src/assets"
+            ],
+            "styles": [
+              "projects/signup/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}

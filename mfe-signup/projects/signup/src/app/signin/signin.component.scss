@@ -1,0 +1,47 @@
+@import "../../shadows.scss";
+
+.signup-wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .signup-card {
+        background-color: #fff;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: stretch;
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+
+        @include smth_shadow(4);
+        border-radius: 8px;
+        border: 1px solid #eee;
+        overflow: hidden;
+
+        .signup-card-image {
+            background-image: url("../../assets/world-cup-album.png");
+            background-position: center;
+            background-size: cover;
+            min-height: 300px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        > form {
+            padding: 2rem;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: stretch;
+            button {
+                margin-top: 0.5rem;
+            }
+            .signin-form-full-width,
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
