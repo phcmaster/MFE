@@ -30,8 +30,8 @@ module.exports = {
         
         // For hosts (please adjust)
         remotes: {
-            "profile": "<URL_here>/remoteEntry.js",
-            "signup": "<URL_here>/remoteEntry.js"
+            "profile": "http://localhost:2200/remoteEntry.js",
+        
         },
 
         shared: share({

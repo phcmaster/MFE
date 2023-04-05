@@ -4,7 +4,7 @@
     width: 100%;
     @include smth_shadow(2);
     position: sticky;
-    background-color: #fff;
+    background-color: rgb(35, 47, 62);
     z-index: 10;
     top: 0;
 }
@@ -16,6 +16,7 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+    color: aliceblue;
 
     div {
         display: flex;
@@ -23,7 +24,7 @@
         height: 100%;
     }
     img {
-        height: 60px;
+        height: 40px;
         border-radius: 8px;
         &:hover {
             cursor: pointer;

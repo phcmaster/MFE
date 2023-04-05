@@ -3,28 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+
   {
-    path: 'signup',
+    path: 'swags',
     loadChildren: () => loadRemoteModule({
-      remoteEntry: '<URL_here>/remoteEntry.js',
-      type: 'module',
-      exposedModule: './SignupModule'
-    })
-      .then(m => m.SignupModule)
-  },
-  {
-    path: 'signin',
-    loadChildren: () => loadRemoteModule({
-      remoteEntry: '<URL_here>/remoteEntry.js',
-      type: 'module',
-      exposedModule: './SigninModule'
-    })
-      .then(m => m.SigninModule)
-  },
-  {
-    path: 'stickers',
-    loadChildren: () => loadRemoteModule({
-      remoteEntry: '<URL_here>/remoteEntry.js',
+      remoteEntry: 'http://localhost:2200/remoteEntry.js',
       type: 'module',
       exposedModule: './StickersModule'
     })

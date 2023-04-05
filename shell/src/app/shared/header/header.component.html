@@ -1,8 +1,8 @@
 <div class="max-width-container-wrap header-outer-wrap">
     <div class="max-width-container header-wrap">
         <div class="links">
-            <img src="/assets/logo-world-cup.jpeg" routerLink="/" alt="Logomarca da Copa do Mundo FIFA 2022">
-            <span>MFE Demo - AWS</span>
+            <img src="/assets/AWS_logo_RGB_WHT.png" (click)="router.navigate(['/'])" alt="AWS Logo">
+            <span>Kubecon 2023 - AWS Booth</span>
         </div>
         <div>
             <a mat-icon-button href="https://github.com/phcmaster/MFE" target="_blank" rel="noopener"
@@ -16,15 +16,6 @@
                     home
                 </mat-icon>
             </a>
-            <a mat-icon-button (click)="logout()" matTooltip="Logout" *ngIf="isLoggedIn">
-                <mat-icon class="material-icons-outlined" aria-hidden="false" aria-label="Home">
-                    logout
-                </mat-icon>
-            </a>
-            <button mat-stroked-button color="primary" (click)="router.navigate(['/signup'])" *ngIf="!isLoggedIn">Sign
-                Up</button>
-            <button mat-raised-button color="primary" (click)="router.navigate(['/signin'])" *ngIf="!isLoggedIn">Sign
-                In</button>
         </div>
     </div>
 </div>
