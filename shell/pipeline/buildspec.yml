@@ -38,5 +38,5 @@ artifacts:
         - '**/*.css'
         - '**/*.ico'
         - '**/*.png'
-    discard-paths: yes
+    discard-paths: no
     base-directory: 'dist/*'
