@@ -31,8 +31,9 @@ phases:
         - pwd
         - echo --------------- Listando files ---------------
         - ls -ll
+        - aws s3 rm s3://kubecon-demo-keda-frontend-1234523 --recursive
         
 artifacts:
     files:
-        - '**/*'
+        - 'dist/shell/*'
     discard-paths: yes
