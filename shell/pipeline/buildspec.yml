@@ -22,14 +22,12 @@ phases:
   build:
     commands:
         - echo Build started
-        # - curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
-        # - sudo yum install -y nodejs
         - npm run build
 
-  post_build:
-    commands:
-        - echo dist path
-        - cd dist/shell
+  # post_build:
+  #   commands:
+  #       - echo dist path
+  #       - cd dist/shell
         
 artifacts:
     files:
