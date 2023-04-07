@@ -27,7 +27,7 @@ phases:
   post_build:
     commands:
         - echo dist path
-        - cd dist/shell
+        # - cd dist/shell
         - pwd
         - echo --------------- Listando files ---------------
         - ls -ll
@@ -35,5 +35,5 @@ phases:
 artifacts:
     files:
         - '**/*'
-    base-directory: 'dist/shell'
+    base-directory: 'dist/shell/'
     discard-paths: no
