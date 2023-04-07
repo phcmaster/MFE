@@ -24,13 +24,16 @@ phases:
         - echo Build started
         - npm run build
 
-  # post_build:
-  #   commands:
-  #       - echo dist path
-  #       - cd dist/shell
+  post_build:
+    commands:
+        - echo dist path
+        # - cd dist/shell
+        - pwd
+        -  - echo --------------- Listando files ---------------
+        - ls -ll
         
 artifacts:
     files:
         - '**/*'
-    base-directory: 'dist/*'
+    base-directory: 'dist/shell/*'
     discard-paths: yes
