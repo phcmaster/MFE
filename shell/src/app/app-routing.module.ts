@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'swags',
     loadChildren: () => loadRemoteModule({
-      remoteEntry: 'https://d15peeunhs9s1p.cloudfront.net/swags/remoteEntry.js',
+      remoteEntry: 'https://d15peeunhs9s1p.cloudfront.net/remoteEntry.js',
       type: 'module',
       exposedModule: './StickersModule'
     })
