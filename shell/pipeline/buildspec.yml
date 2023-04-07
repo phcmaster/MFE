@@ -10,6 +10,7 @@ phases:
         - echo Checking the path...
         - pwd
         - echo Installing source NPM dependencies...
+        - cd shell
         - npm install
         
   build:
