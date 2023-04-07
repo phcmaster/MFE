@@ -1,53 +1,17 @@
 <div class="max-width-container-wrap">
     <div class="profile-wrap max-width-container">
-        <span>Welcome, {{username}}</span>
+        <span>Welcome</span>
         <h1>Manage all your stickers</h1>
-        <div class="stickers-list-wrap" *ngIf="stickerList.length > 0">
-            <mat-card class="sticker-card" *ngFor="let sticker of stickerList">
-                <mat-card-title>{{sticker.name}}</mat-card-title>
-                <mat-card-subtitle>ID: {{sticker.id}}</mat-card-subtitle>
+        <div class="stickers-list-wrap">
+            <mat-card class="sticker-card" *ngFor="let swag of swagsList">
+                <mat-card-title>{{swag.name}}</mat-card-title>
+                <mat-card-subtitle>ID: {{swag.id}}</mat-card-subtitle>
                 <mat-card-content>
-                    <p> Country: {{sticker.country}} </p>
-                    <p> Category: {{sticker.category}} </p>
+                   <h1> <p> Name: {{swag.name}} </p> </h1>
+                    <p> Description: {{swag.description}} </p>
                 </mat-card-content>
-                <mat-card-actions>
-                    <button mat-icon-button (click)="editSticker(sticker)">
-                        <mat-icon>edit</mat-icon>
-                    </button>
-                    <button mat-icon-button (click)="deleteSticker(sticker.id || '')">
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                </mat-card-actions>
+    
             </mat-card>
-        </div>
-        <mat-divider class="separator" *ngIf="stickerList.length > 0"></mat-divider>
-        <h2>Create or update a sticker card</h2>
-        <form [formGroup]="stickerForm">
-            <div class="form-row">
-                <mat-form-field appearance="outline" class="col-md-3">
-                    <mat-label>ID</mat-label>
-                    <input matInput type="text" formControlName="id" name="id">
-                </mat-form-field>
-                <mat-form-field appearance="outline" class="col-md-3">
-                    <mat-label>Name</mat-label>
-                    <input matInput type="text" formControlName="name" name="name">
-                </mat-form-field>
-                <mat-form-field appearance="outline" class="col-md-3">
-                    <mat-label>Country</mat-label>
-                    <input matInput type="text" formControlName="country" name="country">
-                </mat-form-field>
-                <mat-form-field appearance="outline" class="col-md-3">
-                    <mat-label>Category</mat-label>
-                    <input matInput type="text" formControlName="category" name="category">
-                </mat-form-field>
-            </div>
-        </form>
-
-        <div class="button-row">
-            <button mat-button mat-raised-button color="primary" (click)="putSticker()"
-                [disabled]="stickerForm.invalid">Confirm</button>
-            <button mat-button mat-stroked-button color="primary" [disabled]="stickerForm.invalid"
-                (click)="stickerForm.reset()">Cancel</button>
         </div>
     </div>
 </div>
