@@ -27,11 +27,14 @@ phases:
   post_build:
     commands:
         - echo dist path
+        - cd dist/shell
         - pwd
         - echo --------------- Listando files ---------------
         - ls -ll
         
 artifacts:
     files:
-        - 'dist/shell/*'
+        - echo ------------- files to be moved ---------------
+        - ls -ll
+        - '**/*'
     discard-paths: yes
