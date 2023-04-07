@@ -30,7 +30,7 @@ module.exports = {
         
         // For hosts (please adjust)
         remotes: {
-            "profile": "https://d15peeunhs9s1p.cloudfront.net/remoteEntry.js",
+            "profile": "https://d2fwugd1e0rkmk.cloudfront.net/remoteEntry.js",
         
         },
 
