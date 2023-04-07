@@ -5,6 +5,13 @@ env:
          S3_BUCKET: "{{S3_BUCKET}}"
 
 phases:
+  install:
+      runtime-versions:
+        nodejs: 14.x
+      commands:
+        - echo install process started
+        - npm install && npm install -g @angular/cli
+        - node --version
   pre_build:
     commands:
         - echo Checking the path...
@@ -16,9 +23,8 @@ phases:
   build:
     commands:
         - echo Build started
-        - curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
-        - sudo yum install -y nodejs
-        - node --version
+        # - curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+        # - sudo yum install -y nodejs
         - npm run build
 
   post_build:
