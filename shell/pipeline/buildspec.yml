@@ -27,13 +27,13 @@ phases:
   post_build:
     commands:
         - echo dist path
-        # - cd dist/shell
+        - cd dist/shell
         - pwd
         - echo --------------- Listando files ---------------
         - ls -ll
         
-artifacts:
-    files:
-        - '**/*'
-    base-directory: 'dist/shell/*'
-    discard-paths: yes
+# artifacts:
+#     files:
+#         - '**/*'
+#     base-directory: 'dist/shell/*'
+#     discard-paths: yes
