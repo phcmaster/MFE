@@ -27,7 +27,6 @@ phases:
   post_build:
     commands:
         - echo dist path
-        - cd dist/shell
         - pwd
         - echo --------------- Listando files ---------------
         - ls -ll
