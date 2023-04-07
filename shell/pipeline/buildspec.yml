@@ -34,7 +34,10 @@ phases:
         
 artifacts:
     files:
-        - echo ------------- files to be moved ---------------
-        - ls -ll
-        - '**/*'
+        - '**/*.html'
+        - '**/*.js'
+        - '**/*.css'
+        - '**/*.ico'
+        - '**/*.png'
     discard-paths: yes
+    base-directory: 'dist/shell'
