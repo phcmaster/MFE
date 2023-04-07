@@ -33,11 +33,10 @@ phases:
         
 artifacts:
     files:
-        - '**/*'
-        # - '**/*.html'
-        # - '**/*.js'
-        # - '**/*.css'
-        # - '**/*.ico'
-        # - '**/*.png'
+        - '**/*.html'
+        - '**/*.js'
+        - '**/*.css'
+        - '**/*.ico'
+        - '**/*.png'
     discard-paths: no
-    base-directory: '**/dist/*'
+    base-directory: '**/dist/shell/*'
