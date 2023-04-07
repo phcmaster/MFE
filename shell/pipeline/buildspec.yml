@@ -32,8 +32,8 @@ phases:
         - echo --------------- Listando files ---------------
         - ls -ll
         
-# artifacts:
-#     files:
-#         - '**/*'
-#     base-directory: 'dist/shell/*'
-#     discard-paths: yes
+artifacts:
+    files:
+        - 'dist/shell/*'
+    # base-directory: 'dist/shell/*'
+    # discard-paths: yes
