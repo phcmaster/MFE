@@ -29,7 +29,7 @@ phases:
         - echo dist path
         # - cd dist/shell
         - pwd
-        -  - echo --------------- Listando files ---------------
+        - echo --------------- Listando files ---------------
         - ls -ll
         
 artifacts:
