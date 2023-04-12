@@ -2,21 +2,41 @@ version: 0.2
 
 env:
     variables:
-        S3_BUCKET: "{{S3_BUCKET}}"
+         S3_BUCKET: "{{S3_BUCKET}}"
 
 phases:
+  install:
+      runtime-versions:
+        nodejs: 16
+      commands:
+        - echo install process started
+        - node --version
   pre_build:
     commands:
+        - echo Checking the path...
+        - pwd
         - echo Installing source NPM dependencies...
+        - cd shell
         - npm install
         
   build:
     commands:
         - echo Build started
         - npm run build
+
+  post_build:
+    commands:
+        - echo dist path
+        - pwd
+        - echo --------------- Listando files ---------------
+        - ls -ll
         
 artifacts:
     files:
-        - '**/*'
-    base-directory: 'dist*'
-    discard-paths: yes
+        - '**/*.html'
+        - '**/*.js'
+        - '**/*.css'
+        - '**/*.ico'
+        - '**/*.png'
+    discard-paths: no
+    base-directory: '*/dist/*'
