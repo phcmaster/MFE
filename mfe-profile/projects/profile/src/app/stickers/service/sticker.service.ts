@@ -99,7 +99,7 @@ export class SwagService {
   }
 
   public postSwags(swags: ISwags): Observable<any> {
-    return this.http.put(environment.urlApi, swags);
+    return this.http.post(environment.urlApi, swags);
   }
 
 }
