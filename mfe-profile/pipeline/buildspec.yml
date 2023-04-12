@@ -16,7 +16,7 @@ phases:
         - echo Checking the path...
         - pwd
         - echo Installing source NPM dependencies...
-        - cd shell
+        - cd mfe-profile
         - npm install
         
   build:
