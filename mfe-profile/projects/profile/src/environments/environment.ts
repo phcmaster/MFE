@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlApi: '<URL_api_here>/dev/stickers'
+  urlApi: 'https://vbpvw6bewb.execute-api.eu-west-2.amazonaws.com/dev'
 };
 
 /*

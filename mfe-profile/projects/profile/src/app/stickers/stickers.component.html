@@ -1,17 +1,19 @@
 <div class="max-width-container-wrap">
     <div class="profile-wrap max-width-container">
         <span>Welcome</span>
-        <h1>Manage all your stickers</h1>
+        <h1>Choose your AWS swag!</h1>
         <div class="stickers-list-wrap">
             <mat-card class="sticker-card" *ngFor="let swag of swagsList">
-                <mat-card-title>{{swag.name}}</mat-card-title>
-                <mat-card-subtitle>ID: {{swag.id}}</mat-card-subtitle>
+                <img mat-card-image class="img-size" src="{{swag.image}}" alt="Swags">
                 <mat-card-content>
-                   <h1> <p> Name: {{swag.name}} </p> </h1>
-                    <p> Description: {{swag.description}} </p>
+                    <mat-card-subtitle>Code: {{swag.id}}</mat-card-subtitle>
+                    <h2>{{swag.name}} </h2>
+                    <p><b>Category: </b>{{swag.category}}</p>
+                    <p><b>Description: </b>{{swag.description}}</p>
                 </mat-card-content>
-    
+                <button mat-raised-button color="warn" align="end" (click)="postSwags(swag)">Order now</button>
             </mat-card>
         </div>
     </div>
+   <p align="center"><b>DISCLAIMER: </b> Swags are for illustrative purposes only!</p>
 </div>

@@ -9,6 +9,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { StickersRoutingModule } from './stickers-routing.module';
 import { StickersComponent } from './stickers.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -26,7 +28,9 @@ import { StickersComponent } from './stickers.component';
     MatButtonModule,
     MatCardModule,
     MatDividerModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonToggleModule,
+    MatSnackBarModule
   ]
 })
 export class StickersModule { }

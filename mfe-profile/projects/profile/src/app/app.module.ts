@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { registerLocaleData } from "@angular/common";
 import localePt from "@angular/common/locales/pt";
 import { HttpClientModule } from '@angular/common/http';
+import { StickersModule } from './stickers/stickers.module';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -18,7 +19,8 @@ registerLocaleData(localePt);
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    StickersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

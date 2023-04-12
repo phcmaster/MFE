@@ -1,7 +1,9 @@
 export interface ISwags {
-    id?: number;
+    id?: any;
     name?: string;
     event?: string;
     description?: string;
     value?: number;
+    image?: string;
+    category?: string;
   }
