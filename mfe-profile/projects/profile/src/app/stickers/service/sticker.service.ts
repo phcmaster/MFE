@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from 'projects/profile/src/environments/environment';
 import { Observable } from 'rxjs';
+import { ISwags } from '../model/swags.model';
 
 @Injectable({
   providedIn: 'root',
@@ -97,7 +98,7 @@ export class SwagService {
     return this.data.swags
   }
 
-  public postSwags(swags: any): Observable<any> {
+  public postSwags(swags: ISwags): Observable<any> {
     return this.http.post(environment.urlApi, swags);
   }
 
