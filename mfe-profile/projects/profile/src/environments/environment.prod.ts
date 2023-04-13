@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  urlApi: '<URL_API>/dev/stickers'
+  urlApi: 'https://vbpvw6bewb.execute-api.eu-west-2.amazonaws.com/dev/APISendMessageToSQS'
 
 };
