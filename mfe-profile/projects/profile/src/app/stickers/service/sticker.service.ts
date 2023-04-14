@@ -29,7 +29,7 @@ export class SwagService {
         'event':'Kubecon',
         'description':'Official product designed by AWS',
         'value': 100,
-        'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-EKS+Flux.png',
+        'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-EKSFlux.png',
         'category': 'Acessories'
       },
       {
@@ -38,7 +38,7 @@ export class SwagService {
         'event':'Kubecon',
         'description':'Official product designed by AWS',
         'value': 90,
-        'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-EKS+KEDA.png',
+        'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-EKSKEDA.png',
         'category': 'Swags'
       },
       {
