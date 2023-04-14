@@ -30,7 +30,7 @@ export class StickersComponent implements OnInit {
         this.getAWSSwags();
         console.log(swag);
       });
-      this.openSnackBar("Order sended! " + swag.name, "Done");
+      this.openSnackBar("Order sended! \n" + swag.name, "Done");
   }
 
   getAWSSwags() {

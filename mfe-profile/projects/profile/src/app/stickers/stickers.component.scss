@@ -5,6 +5,7 @@
         border-radius: 4px;
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
         .sticker-card {
             flex: 0 0 100px;
             margin-left: 3rem;
@@ -37,5 +38,6 @@
 .img-size {
 width: 20rem;
 height: 15rem;
+object-fit: contain;
 
 }
