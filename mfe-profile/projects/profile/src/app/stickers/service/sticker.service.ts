@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Injectable, ViewChildren } from '@angular/core';
 import { environment } from 'projects/profile/src/environments/environment';
 import { Observable } from 'rxjs';
 import { ISwags } from '../model/swags.model';
@@ -21,70 +20,61 @@ export class SwagService {
         'event':'Kubecon',
         'description':'Official product designed by AWS',
         'value': 10,
-        'image': 'https://www.awsgearshop.com/media/catalog/product/1/4/1452901_1.png?width=1000&height=1000&store=awsgearshop&image-type=image',
-        'category': 'Apparel'
+        'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-AWSOpenSource.png',
+        'category': 'Swags'
       },
       {
         'id': 2,
-        'name':'AWS Full Zip Hoodie - Blue',
+        'name':'Amazon EKS + Flux - GitOps',
         'event':'Kubecon',
         'description':'Official product designed by AWS',
         'value': 100,
-        'image': 'https://www.awsgearshop.com/media/catalog/product/1/5/1538650_z.jpg?width=524&height=524&store=awsgearshop&image-type=weltpixel_hover_image',
+        'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-EKS+Flux.png',
         'category': 'Acessories'
       },
       {
         'id': 3,
-        'name':'AWS Full Zip Hoodie - Grey',
+        'name':'Amazon EKS + KEDA',
         'event':'Kubecon',
         'description':'Official product designed by AWS',
         'value': 90,
-        'image': 'https://www.awsgearshop.com/media/catalog/product/1/4/1452927_1.png?width=1000&height=1000&store=awsgearshop&image-type=image',
-        'category': 'Apparel'
+        'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-EKS+KEDA.png',
+        'category': 'Swags'
       },
       {
         'id': 4,
-        'name':'AWS Nylon Dog Leash – Orange',
+        'name':'AWS Logo Holografic',
         'event':'Kubecon',
         'description':'Official product designed by AWS',
         'value': 60,
-        'image': 'https://www.awsgearshop.com/media/catalog/product/1/4/1452933_1.png?width=1000&height=1000&store=awsgearshop&image-type=image',
-        'category': 'Pets'
+        'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-holografic.PNG',
+        'category': 'Swags'
       },
       {
         'id': 5,
-        'name':'AWS Toddler Building Block T-Shirt – Blue',
+        'name':'AWS Bag',
         'event':'Kubecon',
         'description':'Official product designed by AWS',
         'value': 40,
-        'image': 'https://www.awsgearshop.com/media/catalog/product/1/5/1535910_3.jpg?width=1000&height=1000&store=awsgearshop&image-type=image',
-        'category': 'Kids'
-      },
-      {
-        'id': 6,
-        'name':'AWS Toddler Smiley T-Shirt – Grey',
-        'event':'Kubecon',
-        'description':'Official product designed by AWS',
-        'value': 80,
-        'image': 'https://www.awsgearshop.com/media/catalog/product/1/5/1535906_3.jpg?width=1000&height=1000&store=awsgearshop&image-type=image',
-        'category': 'Kids'
-      },
-      {
-        'id': 7,
-        'name':'AWS Logo Golf Hat - Grey',
-        'event':'Kubecon',
-        'description':'Official product designed by AWS',
-        'value': 70,
-        'image': 'https://www.awsgearshop.com/media/catalog/product/1/5/1536925_1.png?width=1000&height=1000&store=awsgearshop&image-type=image',
+        'image': 'https://d28eb6vuexefot.cloudfront.net/swag-AWSBag.png',
         'category': 'Acessories'
       },
       {
-        'id': 8,
-        'name':'AWS Established Journal - Purple',
+        'id': 6,
+        'name':'AWS Bootle',
         'event':'Kubecon',
         'description':'Official product designed by AWS',
-        'value': 20,
-        'image': 'https://www.awsgearshop.com/media/catalog/product/1/5/1536670_purple_aws_journal_4.jpg?width=1000&height=1000&store=awsgearshop&image-type=image',
+        'value': 80,
+        'image': 'https://d28eb6vuexefot.cloudfront.net/swag-AWSBootle.png',
+        'category': 'Acessories'
+      },
+      {
+        'id': 7,
+        'name':'AWS Socks',
+        'event':'Kubecon',
+        'description':'Official product designed by AWS',
+        'value': 70,
+        'image': 'https://d28eb6vuexefot.cloudfront.net/swag-AWSSocks.png',
         'category': 'Acessories'
       }
     
