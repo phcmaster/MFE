@@ -16,7 +16,7 @@ export class SwagService {
     
       {
         'id': 1,
-        'name':'AWS Logo T-Shirt – Squid Ink',
+        'name':'AWS Logo - Open Source',
         'event':'Kubecon',
         'description':'Official product designed by AWS',
         'value': 10,
@@ -30,7 +30,7 @@ export class SwagService {
         'description':'Official product designed by AWS',
         'value': 100,
         'image': 'https://d28eb6vuexefot.cloudfront.net/sticker-EKSFlux.png',
-        'category': 'Acessories'
+        'category': 'Swags'
       },
       {
         'id': 3,
