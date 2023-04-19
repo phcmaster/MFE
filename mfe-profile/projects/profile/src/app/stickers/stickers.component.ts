@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ISwags } from './model/swags.model';
 import { SwagService } from './service/sticker.service';
 
+
 @Component({
   selector: 'app-stickers',
   templateUrl: './stickers.component.html',
